@@ -2,13 +2,17 @@ variable "name" {
     type = string
     default = "locals"
 }
+variable "env" {
+    type = string
+    default = "dev"
+}
 
 variable "ec2_tags" {
     type = map
     default = {
         Name =  "terraform"
         project = "roboshop"
-        env = "dev"
+        Env = "dev"
         terraform = "true"
     }
 }
