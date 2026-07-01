@@ -7,6 +7,6 @@ locals {
         terraform = "true"
         project = "roboshop"
     }
-    ec2_final_tags = merge(local.common_tags.var.ec2_tags)
+    ec2_final_tags = merge(local.common_tags, var.ec2_tags)
     
 }
