@@ -40,6 +40,11 @@ variable "sg_cidr_blocks" {
     default = ["0.0.0.0/0"]
 }
 variable "sg_tags" {
+    type = map
+    default = {
+        Name = "allow-all-terraform"
+
+    }
      
-    Name = "allow-all-terraform"
+    
 }
