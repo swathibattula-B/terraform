@@ -10,7 +10,7 @@ resource "aws_instance" "example"  {
 
 }
 
-resorce "aws_security_group "allow_tls"  {
+resource "aws_security_group "allow_tls"  {
     name = "allow-all-terraform"
     description = "allow all  inbound and outbound traffic"
 
