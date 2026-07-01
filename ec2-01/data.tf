@@ -1,15 +1,17 @@
 data "aws_ami" "joindevops" {
+
     owners = ["973714476881]
 
 
-filter {
+
+    filter {
     name = "ami_name"
     values = ["Redhat-9-DevOps-Practice"]
-}
+    }
 
-filter {
+    filter {
     name = "Virtualization type"
     values = ["hvm"]
-}
+    }
 
 }
