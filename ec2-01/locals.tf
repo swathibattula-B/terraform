@@ -1,5 +1,5 @@
 locals {
-    ami_id =  "ami-0220d79f3f480ecf5"
+    ami_id =  data.aws_ami.joindevops.id
     instance_type = "t3.micro"
     common_tags =  {
         Name = "${var.name}-${var.env}"
