@@ -3,15 +3,15 @@ resource "aws_instance" "example"  {
     instance_type ="t3.micro"
     vpc_security_group_ids=[aws_security_group.allow_tls.id]
 
-    tags {
-        NAME= "terraform"
-        project= "roboshop"
+    tags = {
+        NAME = "terraform"
+        project = "roboshop"
     }
 
 }
 
 resorce "aws_security_group "allow_tls"  {
-    name = "allow-all-terraform'
+    name = "allow-all-terraform"
     description = "allow all  inbound and outbound traffic"
 
 
@@ -32,7 +32,7 @@ resorce "aws_security_group "allow_tls"  {
 
     }
 
-    tags {
+    tags = {
         NAME= "allow-all-terraform"
     }
 
